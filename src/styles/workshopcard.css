@@ -1,0 +1,119 @@
+.workshop-card {
+  background: var(--fossee-white);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid transparent;
+}
+
+.workshop-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-color: var(--border);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.type-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #e8f0fe;
+  color: #1a73e8;
+}
+
+.status-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.status-upcoming { background: #e8f5e9; color: #2e7d32; }
+.status-full     { background: #fdecea; color: #c62828; }
+.status-pending  { background: #fff8e1; color: #f57f17; }
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--fossee-dark);
+  line-height: 1.4;
+}
+
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.85rem;
+  color: var(--fossee-muted);
+}
+
+.seats-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.seats-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--fossee-muted);
+}
+
+.progress-bar {
+  height: 6px;
+  background: #eeeeee;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.book-btn {
+  display: block;
+  text-align: center;
+  padding: 11px;
+  background: var(--fossee-red);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: auto;
+}
+
+.book-btn:hover {
+  background: #a93226;
+}
+
+.book-btn:active {
+  transform: scale(0.97);
+}
+
+.book-btn.disabled {
+  background: #cccccc;
+  color: #888888;
+  pointer-events: none;
+}
