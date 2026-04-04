@@ -1,0 +1,91 @@
+.register-card {
+  max-width: 500px !important;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 24px;
+}
+
+.step-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--border);
+  color: var(--fossee-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.step-dot.done {
+  background: var(--fossee-red);
+  color: white;
+}
+
+.step-line {
+  height: 2px;
+  width: 60px;
+  background: var(--border);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field-error {
+  color: #c0392b;
+  font-size: 0.78rem;
+  margin-top: 2px;
+}
+
+.form-group select {
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--fossee-text);
+  background: white;
+  width: 100%;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: var(--fossee-red);
+}
+
+.reg-btn-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-back {
+  padding: 13px 18px;
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  color: var(--fossee-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-back:hover {
+  border-color: var(--fossee-dark);
+  color: var(--fossee-dark);
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
