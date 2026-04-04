@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import Home from "./pages/Home"
 import Login from "./pages/Login"
+import Register from "./pages/Register"
 import Profile from "./pages/Profile"
 import "./styles/index.css"
 
@@ -8,11 +11,15 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<div style={{padding:"100px 24px"}}><h2>Home Page (coming soon)</h2></div>} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </main>
+      <Footer />
     </BrowserRouter>
   )
 }
