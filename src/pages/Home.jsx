@@ -32,9 +32,10 @@ function Home() {
           <h1>FOSSEE Workshop Booking</h1>
           <p>Book hands-on workshops on open-source tools — Python, Scilab, OpenFOAM and more. Conducted by IIT Bombay faculty.</p>
           <div className="hero-actions">
-            <Link to="/register" className="hero-btn primary">Get Started</Link>
-            <Link to="/statistics" className="hero-btn outline">View Statistics</Link>
-          </div>
+             <Link to="/register" className="hero-btn primary">Register Free</Link>
+             <Link to="/login" className="hero-btn outline">Sign In</Link>
+             <Link to="/statistics" className="hero-btn outline">View Statistics</Link>
+          </div> 
         </div>
       </section>
 

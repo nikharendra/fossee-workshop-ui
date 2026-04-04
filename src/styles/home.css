@@ -2,45 +2,47 @@
   padding-top: 60px;
 }
 
+/* ── Hero ── */
 .hero {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #c0392b 100%);
-  padding: 64px 24px;
+  padding: 72px 24px;
   text-align: center;
 }
 
 .hero-content {
-  max-width: 620px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
 .hero-content h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: white;
   font-weight: 700;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   line-height: 1.3;
 }
 
 .hero-content p {
   font-size: 1rem;
   color: rgba(255,255,255,0.8);
-  margin-bottom: 28px;
-  line-height: 1.7;
+  margin-bottom: 32px;
+  line-height: 1.8;
 }
 
 .hero-actions {
   display: flex;
-  gap: 14px;
+  gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .hero-btn {
-  padding: 12px 28px;
+  padding: 12px 26px;
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.2s;
+  display: inline-block;
 }
 
 .hero-btn.primary {
@@ -50,34 +52,38 @@
 
 .hero-btn.primary:hover {
   background: #a93226;
+  transform: translateY(-1px);
 }
 
 .hero-btn.outline {
-  border: 2px solid rgba(255,255,255,0.6);
+  border: 2px solid rgba(255,255,255,0.5);
   color: white;
+  background: transparent;
 }
 
 .hero-btn.outline:hover {
   background: rgba(255,255,255,0.1);
+  border-color: white;
 }
 
+/* ── Workshops section ── */
 .workshops-section {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 48px 20px 60px;
 }
 
 .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   flex-wrap: wrap;
   gap: 12px;
 }
 
 .section-header h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--fossee-dark);
   font-weight: 700;
 }
@@ -98,15 +104,16 @@
   border-color: var(--fossee-red);
 }
 
+/* ── Filter tabs ── */
 .filter-tabs {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .filter-tab {
-  padding: 7px 16px;
+  padding: 7px 18px;
   border-radius: 20px;
   border: 1.5px solid var(--border);
   background: white;
@@ -128,21 +135,37 @@
   border-color: var(--fossee-red);
 }
 
+/* ── Cards grid ── */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 
+/* ── Empty state ── */
 .no-results {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
   color: var(--fossee-muted);
 }
 
-@media (max-width: 600px) {
+.no-results p {
+  font-size: 1rem;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-btn {
+    padding: 11px 20px;
+    font-size: 0.9rem;
   }
 
   .section-header {
@@ -152,5 +175,43 @@
 
   .search-input {
     width: 100%;
+  }
+
+  .workshops-section {
+    padding: 32px 16px 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 52px 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-tabs {
+    gap: 6px;
+  }
+
+  .filter-tab {
+    padding: 6px 14px;
+    font-size: 0.8rem;
   }
 }

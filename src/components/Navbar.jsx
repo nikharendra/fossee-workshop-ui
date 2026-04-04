@@ -6,6 +6,13 @@ import "../styles/navbar.css"
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
+  // later this will come from real auth context
+  const isLoggedIn = false
+
+  function close() {
+    setMenuOpen(false)
+  }
+
   return (
     <nav className="navbar">
       <div className="nav-brand">
@@ -21,16 +28,34 @@ function Navbar() {
       </button>
 
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-        <li><Link to="/workshops" onClick={() => setMenuOpen(false)}>Workshops</Link></li>
-        <li><Link to="/statistics" onClick={() => setMenuOpen(false)}>Statistics</Link></li>
-        <li><Link to="/propose" onClick={() => setMenuOpen(false)}>Propose Workshop</Link></li>
-        <li>
-          <Link to="/profile" className="nav-profile" onClick={() => setMenuOpen(false)}>
-            <FiUser size={18} />
-            <span>My Profile</span>
-          </Link>
-        </li>
+        <li><Link to="/" onClick={close}>Home</Link></li>
+        <li><Link to="/statistics" onClick={close}>Statistics</Link></li>
+
+        {isLoggedIn ? (
+          <>
+            <li><Link to="/workshops" onClick={close}>Workshops</Link></li>
+            <li><Link to="/propose" onClick={close}>Propose Workshop</Link></li>
+            <li>
+              <Link to="/profile" className="nav-profile" onClick={close}>
+                <FiUser size={16} />
+                <span>My Profile</span>
+              </Link>
+            </li>
+          </>
+        ) : (
+          <>
+            <li>
+              <Link to="/login" className="nav-login" onClick={close}>
+                Sign In
+              </Link>
+            </li>
+            <li>
+              <Link to="/register" className="nav-register" onClick={close}>
+                Register
+              </Link>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   )
