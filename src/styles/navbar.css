@@ -209,3 +209,43 @@
     font-size: 1rem;
   }
 }
+
+
+
+
+
+
+
+/* ── Logout button ── */
+.nav-logout {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  color: rgba(255,255,255,0.75);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-logout:hover {
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border-color: rgba(255,255,255,0.4);
+}
+
+@media (max-width: 768px) {
+  .nav-logout {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    margin-top: 4px;
+  }
+}
