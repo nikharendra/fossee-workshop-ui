@@ -8,8 +8,8 @@ const allWorkshops = [
   { id: 2, title: "Scilab for Engineering", instructor: "Dr. Manas Das", date: "2026-05-22", seats: 25, booked: 25, type: "Scilab", status: "full" },
   { id: 3, title: "OpenFOAM Fluid Simulation", instructor: "Dr. Anand Kumar", date: "2026-06-01", seats: 20, booked: 9, type: "OpenFOAM", status: "upcoming" },
   { id: 4, title: "DWSIM Process Simulation", instructor: "Pending", date: "2026-06-10", seats: 35, booked: 12, type: "DWSIM", status: "pending" },
-  { id: 5, title: "eSim Circuit Design", instructor: "Dr. Rakhi R", date: "2026-06-18", seats: 30, booked: 21, type: "eSim", status: "upcoming" },
-  { id: 6, title: "OpenModelica Workshop", instructor: "Dr. Priyanka", date: "2026-07-02", seats: 25, booked: 5, type: "OpenModelica", status: "upcoming" },
+  { id: 5, title: "eSim Circuit Design", instructor: "Dr. Rakhi T", date: "2026-06-18", seats: 30, booked: 21, type: "eSim", status: "upcoming" },
+  { id: 6, title: "OpenModelica Workshop", instructor: "Dr. Nikita S", date: "2026-07-02", seats: 25, booked: 5, type: "OpenModelica", status: "upcoming" },
 ]
 
 const filters = ["All", "Python", "Scilab", "OpenFOAM", "DWSIM", "eSim", "OpenModelica"]

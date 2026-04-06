@@ -6,7 +6,6 @@ import "../styles/navbar.css"
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
-  // temporary: toggle this to test both logged-in and logged-out views
   // in real app this comes from auth context / API
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 

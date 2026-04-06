@@ -18,7 +18,7 @@ function Login() {
       return
     }
     setError("")
-    // In real app: call Django API here
+    // In real app: call Django API here currently this is just a sample 
     alert("Login submitted!")
   }
 
@@ -77,7 +77,7 @@ function Login() {
             Sign In
           </button>
         </form>
-{/* Password reset */}
+{/* Password reset concept */}
         <div className="auth-footer">
           <Link to="/forgot-password">Forgot password?</Link>
           <span>·</span>
