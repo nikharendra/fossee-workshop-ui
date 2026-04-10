@@ -175,6 +175,14 @@ it made the mobile experience feel much more natural.
 - React Icons
 - Plain CSS with custom properties (no CSS framework)
 
+
+# FOSSEE Workshop Booking — UI/UX Redesign
+
+##  Live Demo
+https://fossee-workshop-ui.vercel.app/
+
+
+
 ## Original Repository
 
 https://github.com/FOSSEE/workshop_booking

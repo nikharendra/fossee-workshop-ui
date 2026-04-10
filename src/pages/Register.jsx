@@ -78,7 +78,7 @@ function Register() {
             </div>
             <div className="form-group">
               <label>Password</label>
-              <input name="password" type="password" value={form.password} onChange={handleChange} placeholder="Min. 6 characters" />
+              <input name="password" type="password" value={form.password} onChange={handleChange} placeholder="Min. 8 characters" />
               {errors.password && <span className="field-error">{errors.password}</span>}
             </div>
             <div className="form-group">
