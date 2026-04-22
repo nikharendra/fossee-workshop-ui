@@ -2,7 +2,7 @@ import "../styles/profile.css"
 import { FiEdit2 } from "react-icons/fi"
 import { Link } from "react-router-dom"
 
-// Dummy data just for showcase  — mirrors what Django sends (just for showcase purpose)
+// dummy user data — in production fetched from /api/profile/ endpoint
 const user = {
   first_name: "Harendra",
   last_name: " Singh Yadav",
@@ -21,6 +21,9 @@ const workshops = [
 ]
 
 function Profile() {
+
+  // renders initials-based avatar using first letters of first and last name
+// avoids loading any image which keeps the page fast on mobile
   return (
     <div className="profile-page">
 

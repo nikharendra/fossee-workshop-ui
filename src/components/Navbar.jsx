@@ -4,22 +4,27 @@ import { FiMenu, FiX, FiUser, FiLogOut } from "react-icons/fi"
 import "../styles/navbar.css"
 
 function Navbar() {
+  // controls mobile menu open/close state 
   const [menuOpen, setMenuOpen] = useState(false)
 
-  // in real app this comes from auth context / API
+  // temporary auth state — in production this comes from auth context or JWT
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
+  // used to highlight the active nav link based on current URL
   const location = useLocation()
 
+  // closes mobile menu when a link is clicked
   function close() {
     setMenuOpen(false)
   }
 
+  // handles logout — clears auth state and closes menu
   function handleLogout() {
     setIsLoggedIn(false)
     close()
   }
 
+  // returns "active" class if current path matches the given path
   function isActive(path) {
     return location.pathname === path ? "active" : ""
   }

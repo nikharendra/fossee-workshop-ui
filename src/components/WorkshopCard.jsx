@@ -3,8 +3,12 @@ import { FiCalendar, FiUser, FiUsers } from "react-icons/fi"
 import "../styles/workshopcard.css"
 
 function WorkshopCard({ workshop }) {
+   // destructure all needed fields from the workshop object
   const { id, title, instructor, date, seats, booked, type, status } = workshop
+
+  // calculate remaining seats
   const spotsLeft = seats - booked
+  // calculate fill percentage for the progress bar
   const fillPercent = Math.round((booked / seats) * 100)
 
   return (
@@ -36,6 +40,9 @@ function WorkshopCard({ workshop }) {
           <span>{booked}/{seats}</span>
         </div>
         <div className="progress-bar" role="progressbar" aria-valuenow={fillPercent} aria-valuemin={0} aria-valuemax={100}>
+
+          /* color changes based on how full the workshop is:
+    green = plenty of seats, amber = nearly full, red = completely full */
           <div className="progress-fill" style={{ width: `${fillPercent}%`, background: fillPercent >= 100 ? "#e74c3c" : fillPercent > 70 ? "#f39c12" : "#27ae60" }} />
         </div>
       </div>

@@ -4,19 +4,27 @@ import "../styles/login.css"
 import "../styles/register.css"
 
 function Register() {
+
+  // tracks which step the user is on — step 1 (account) or step 2 (profile)
   const [step, setStep] = useState(1)
+
+  // stores all form field values across both steps
   const [form, setForm] = useState({
     first_name: "", last_name: "", email: "",
     username: "", password: "", confirm_password: "",
     institute: "", department: "", phone: "", position: ""
   })
+
+  // stores field-level validation errors shown below each input
   const [errors, setErrors] = useState({})
 
+  // updates a single field in form state, clears its error
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value })
     setErrors({ ...errors, [e.target.name]: "" })
   }
 
+  // validates only step 1 fields before allowing user to proceed
   function validateStep1() {
     const e = {}
     if (!form.first_name.trim()) e.first_name = "First name is required"
@@ -27,6 +35,7 @@ function Register() {
     return e
   }
 
+   // moves to step 2 only if step 1 validation passes
   function handleNext() {
     const e = validateStep1()
     if (Object.keys(e).length > 0) { setErrors(e); return }

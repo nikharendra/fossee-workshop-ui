@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import WorkshopCard from "../components/WorkshopCard"
 import "../styles/home.css"
 
+// dummy workshop data — in production this is fetched from Django REST API
 const allWorkshops = [
   { id: 1, title: "Python for Scientific Computing", instructor: "Dr. Prabhu Ramachandran", date: "2026-05-15", seats: 30, booked: 18, type: "Python", status: "upcoming" },
   { id: 2, title: "Scilab for Engineering", instructor: "Dr. Manas Das", date: "2026-05-22", seats: 25, booked: 25, type: "Scilab", status: "full" },
@@ -18,6 +19,7 @@ function Home() {
   const [active, setActive] = useState("All")
   const [search, setSearch] = useState("")
 
+  // filters workshops by selected type tab AND search input simultaneously
   const visible = allWorkshops.filter(w => {
     const matchFilter = active === "All" || w.type === active
     const matchSearch = w.title.toLowerCase().includes(search.toLowerCase())

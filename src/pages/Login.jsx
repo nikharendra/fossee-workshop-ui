@@ -3,22 +3,27 @@ import { Link } from "react-router-dom"
 import "../styles/login.css"
 
 function Login() {
+  // stores the values of username and password fields
   const [formData, setFormData] = useState({ username: "", password: "" })
+   // stores error message shown above the form
   const [error, setError] = useState("")
+  // toggles password visibility between text and password type
   const [showPassword, setShowPassword] = useState(false)
 
+   // updates formData when any input field changes
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
+  // validates form before submission
   function handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault()  // prevent default browser form submission
     if (!formData.username || !formData.password) {
       setError("Please fill in all fields.")
       return
     }
     setError("")
-    // In real app: call Django API here currently this is just a sample 
+    // TODO: replace with actual Django API call using fetch or axios
     alert("Login submitted!")
   }
 
